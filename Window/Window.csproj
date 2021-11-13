@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AssemblyBrowser\AssemblyBrowser.csproj" />
+    <ProjectReference Include="..\AssemblyBrowser\AssemblyAnalyzer.csproj" />
   </ItemGroup>
 
 </Project>

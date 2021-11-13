@@ -3,10 +3,28 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Window"
+        xmlns:local="clr-namespace:Window.ViewModel"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
+        Title="MainWindow" Height="450" Width="458">
+    <Grid HorizontalAlignment="Left" Width="457">
+        <Button Content="Выбор файла
+                " HorizontalAlignment="Left" Margin="16,30,0,0" VerticalAlignment="Top" Width="78" 
+                Command="{Binding Source={StaticResource vm},Path=ButtonCommand}"
+                />
+        <TreeView Margin="10,83,10,10" RenderTransformOrigin="0.5,0.5">
+            <TreeView.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="0"/>
+                </TransformGroup>
+            </TreeView.RenderTransform>
+            <TreeView/>
+        </TreeView>
+        <Label Content="Путь к файлу:" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top"/>
+        <Label HorizontalAlignment="Left" Margin="99,63,0,0" VerticalAlignment="Top" x:Name="LabelFileName"
+               Content="{Binding FileName, UpdateSourceTrigger=PropertyChanged}"
+               />
     </Grid>
 </Window>
