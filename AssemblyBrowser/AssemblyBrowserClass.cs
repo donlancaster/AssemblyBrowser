@@ -8,7 +8,7 @@ using AssemblyBrowser.Formatter;
 
 namespace AssemblyBrowser
 {
-    class AssemblyBrowser
+   public  class AssemblyBrowserClass
     {
         public List<Container> GetAssemblyInfo(string filePath)
         {
