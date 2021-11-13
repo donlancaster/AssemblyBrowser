@@ -8,5 +8,6 @@ namespace AssemblyBrowser
 {
     class AssemblyBrowser
     {
+
     }
 }
