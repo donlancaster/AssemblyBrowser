@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AssemblyBrowser.Formatter
+namespace AssemblyAnalyzer.Formatter
 {
     public static class ClassFormatter
     {

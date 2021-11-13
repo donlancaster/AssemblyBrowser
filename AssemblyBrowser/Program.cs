@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AssemblyBrowser
+namespace AssemblyAnalyzer
 {
     class Program
     {

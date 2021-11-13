@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AssemblyBrowser.Containers
+namespace AssemblyAnalyzer.Containers
 {
     public class MemberInfo
     {

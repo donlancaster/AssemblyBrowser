@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 using System.Reflection;
 using System.Threading.Tasks;
 
-namespace AssemblyBrowser.Formatter
+namespace AssemblyAnalyzer.Formatter
 {
     public static class FieldFormatter
     {
