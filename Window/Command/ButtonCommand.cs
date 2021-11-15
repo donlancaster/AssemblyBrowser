@@ -1,13 +1,13 @@
-﻿using System;
+﻿using Assembly_Browser.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using ButtonViewModel = Window.ViewModel.ButtonViewModel;
+using ButtonViewModel = Assembly_Browser.ViewModel.ButtonViewModel;
 
-namespace Window.ViewModel
-
+namespace Assembly_Browser
 {
     class ButtonCommand : ICommand
     {

@@ -36,7 +36,7 @@ namespace AssemblyAnalyzer
                     assemblyInfo.TryGetValue(type.Namespace, out var container);
 
                     container.Members.Add(GetMembers(type));
-
+                  
                     if (type.IsDefined(typeof(ExtensionAttribute), false))
                         assemblyInfo = GetExtensionNamespaces(type, assemblyInfo);
 

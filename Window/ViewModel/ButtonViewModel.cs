@@ -5,8 +5,9 @@ using System.ComponentModel;
 using System.Windows;
 using AssemblyAnalyzer;
 
+using Container = AssemblyAnalyzer.Containers.Container;
 
-namespace Window.ViewModel
+namespace Assembly_Browser.ViewModel
 {
     class ButtonViewModel : INotifyPropertyChanged
     {
