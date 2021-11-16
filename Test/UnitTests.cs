@@ -48,7 +48,7 @@ namespace Test
         }
 
         [TestMethod]
-        public void AssemblyClassHasMemberGetObjectTest()
+        public void ClassHasMemberLoadPluginGenerators()
         {
             string memberGetObject = "public  Void LoadPluginGenerators ()";
             Container container = (Container)_assemblyInfo[1].Members[1];
@@ -64,7 +64,29 @@ namespace Test
             Assert.IsTrue(hasMemberGetObject);
         }
 
+        [TestMethod]
+        public void ClassHasMemberConstructor()
+        {
+            string memberConstructor = "public .ctor ()";
+            Container container = (Container)_assemblyInfo[1].Members[0];
+            bool hasMemberConstructor = false;
+            foreach (MemberInfo member in container.Members)
+            {
+                if (member.Signature.Equals(memberConstructor))
+                {
+                    hasMemberConstructor = true;
+                    break;
+                }
+            }
+            Assert.IsTrue(hasMemberConstructor);
+        }
 
+        [TestMethod]
+        public void IncorrectAssemblyPathTest()
+        {
+            string path = "../WRONG_PATH//Assembly.dll";
+            Assert.ThrowsException<FileNotFoundException>(() => _assemblyBrowser.GetAssemblyInfo(path));
+        }
 
     }
 
