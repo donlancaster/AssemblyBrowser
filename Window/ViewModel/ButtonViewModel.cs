@@ -98,7 +98,7 @@ namespace Assembly_Browser.ViewModel
             OnPropertyChanged("Signature");
             OnPropertyChanged("Members");
             OnPropertyChanged(nameof(Namespaces));
-            MessageBox.Show("Managed");
+         
 
             //OnPropertyChanged("Signature");
         }

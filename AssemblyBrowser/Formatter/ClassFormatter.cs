@@ -31,7 +31,7 @@ namespace AssemblyAnalyzer.Formatter
             if (type.IsNestedFamORAssem)
                 return "protected internal";
             if (type.IsNestedFamANDAssem)
-                return "private protected ";
+                return "private protected";
             if (type.IsNotPublic)
                 return "private ";
 

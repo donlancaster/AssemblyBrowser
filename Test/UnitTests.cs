@@ -1,5 +1,4 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 using AssemblyAnalyzer.Containers;
 using System.Collections.Generic;
 using AssemblyAnalyzer;

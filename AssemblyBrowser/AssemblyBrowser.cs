@@ -12,7 +12,7 @@ using MemberInfo = AssemblyAnalyzer.Containers.MemberInfo;
 
 namespace AssemblyAnalyzer
 {
-   public  class AssemblyBrowser
+    public class AssemblyBrowser
     {
         public List<Container> GetAssemblyInfo(string filePath)
         {
@@ -36,7 +36,7 @@ namespace AssemblyAnalyzer
                     assemblyInfo.TryGetValue(type.Namespace, out var container);
 
                     container.Members.Add(GetMembers(type));
-                  
+
                     if (type.IsDefined(typeof(ExtensionAttribute), false))
                         assemblyInfo = GetExtensionNamespaces(type, assemblyInfo);
 
@@ -71,6 +71,8 @@ namespace AssemblyAnalyzer
 
             return assemblyInfo;
         }
+
+
 
         private static Container GetMembers(Type type)
         {
@@ -113,12 +115,12 @@ namespace AssemblyAnalyzer
 
         private static List<MemberInfo> GetFields(Type type)
         {
-            return type.GetFields().Select(field => new MemberInfo(FieldFormatter.Format(field), ClassFormatter.Format(type))).ToList(); //Instance | Static | Public | NonPublic
+            return type.GetFields().Select(field => new MemberInfo(FieldFormatter.Format(field), ClassFormatter.Format(type))).ToList(); 
         }
 
         private static IEnumerable<MemberInfo> GetProperties(Type type)
         {
             return type.GetProperties().Select(property => new MemberInfo(PropertyFormatter.Format(property), ClassFormatter.Format(type))).ToList();
-        } //Instance | Static | Public | NonPublic
+        } 
     }
 }
